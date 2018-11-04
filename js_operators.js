@@ -25,11 +25,25 @@ console.log(num6.toString(2));
 var num7 = 25;
 var num8 = ~num7;
 
-console.log(num8);
+console.log("NOT", num8);
 
 // bitwise AND
+// one rule result never goes up than the smaller number 
 
 var num9 = 42;
 var num10 =6;
 
-console.log(num9 & num10);
+console.log("AND", num9 & num10);
+
+// bitwise OR and XOR
+console.log("OR",num9 | num10);
+console.log("XOR",num9 ^ num10);
+
+// boolean operators ! / || / &&
+// ! operator always return boolean values
+// || and && don't always return primitive boolean values, but returns equivalent
+// e.g. return null, which is a falsy value, in (if condition) reads as false
+var obj = {};
+console.log(obj && null);
+console.log(null && obj);
+

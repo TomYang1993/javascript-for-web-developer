@@ -47,3 +47,25 @@ var obj = {};
 console.log(obj && null);
 console.log(null && obj);
 
+// multiply, divide, modulus operator
+//anything contains NaN, the result will be NaN
+
+console.log(Infinity * 0);
+console.log(Infinity / Infinity);
+console.log(0 / 0);
+console.log(Infinity % 5);
+console.log(5 % 0);
+console.log(Infinity % Infinity);
+
+// add operator needs attention when it comes to string
+
+console.log("this is a " + true);
+console.log("this is a " + 5);
+console.log("this is a " + 6 + 78);
+console.log("this is a " + null);
+console.log("this is a " + obj);
+
+// subtract operator needs attention about number
+console.log(Number(undefined));
+console.log(0 - undefined);
+

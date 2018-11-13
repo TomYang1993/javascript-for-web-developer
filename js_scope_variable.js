@@ -17,8 +17,8 @@ console.log(person.name);  // will output tom, cuz pass by value of the referenc
 
 
 // typeof and instanceof
-// typeof mainly tell differences between primitive and object
-// instanceof are used between objects, used with primitives will always return false
+// typeof mainly tell differences between primitive and object, determines primitive types
+// instanceof are used between objects, used with primitives will always return false, determine reference types
 
 //sc:
 console.log(typeof null);

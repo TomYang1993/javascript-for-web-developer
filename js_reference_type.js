@@ -118,6 +118,44 @@ console.log(numbers);   // change to original array
 
 
 
+// PRIMITIVE WRAPPER (diffrent with casting functions)
+
+// new Object() follows factory pattern, take in string, produce string instance, takes in number, produce number instance 
+
+// other wrapper methods takes in primitive values and return objects
+// these created objects override their own valueOf() toString() methods
+var falseObject = new Boolean(false);
+
+console.log(falseObject && true);
+console.log(falseObject.valueOf() && true);
+
+// NUMBER TYPE
+var testNumber = 73.34623809570928743509;
+console.log(testNumber.toPrecision());
+console.log(testNumber.toFixed(6));
+console.log(testNumber.toExponential(5));
+
+
+// STRING TYPE
+
+// actions behind scenes so that we can use methods on 'primitive'
+var s1 = "test text";
+s1.substring(2); // into read mode, create a string instance(object), perform methods on it, destroy the instance
+console.log(s1); // s1 is still the primitive string value
+
+
+
+// SINGLETON BUILT-IN OBJECT
+
+// Global
+// encodeURI() make browser understand the URI, remove invalid characters
+// eval() power is to execute javascript in string format
+
+// Window -- browser specific delegated Global object
+
+// Math
+// max(), min(),random()
+
 
 
 

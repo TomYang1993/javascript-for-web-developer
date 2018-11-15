@@ -77,3 +77,47 @@ function compare(v1, v2) {
     return (v1 - v2);
 }
 console.log(arr6);
+
+
+// CONCAT() SLICE() SPLICE()
+
+var numbers = [1,5,6];
+
+console.log(numbers.concat());   // return exact copy
+var numbers2 = numbers.concat("Tom", [1,4], [1,4,"Tom"]);
+console.log(numbers);   // no change to original array
+console.log(numbers2);
+
+console.log(numbers.slice(2));
+console.log(numbers.slice(3,2));
+console.log(numbers.slice(1,3));
+console.log(numbers.slice(1,4));
+console.log(numbers.slice(-2,-1));
+console.log(numbers);   // no change to original array
+
+console.log(numbers.splice(0,1,4,5,2,6,2,));  // shows the removed ones
+console.log(numbers);   // change to original array
+console.log(numbers.splice(1,2));  // shows the removed ones
+console.log(numbers);   // change to original array
+console.log(numbers.splice(0,1));  // shows the removed ones
+console.log(numbers);   // change to original array
+
+// indexOf() lastIndexOf()
+// returns index when it's in array, if === , the returns, doesn't care if there is another match
+// returns -1 when it's not found
+
+// some() every() forEach() map() filter() has three parameters // item value, index, array(itself)
+// some() and every() used to determine a boolean
+// filter() used to return a filtered array based on return value
+// map used to customize every return value
+// forEach is just like for loop
+
+// reduce() reduceRight()
+// pre cur index array, iteration starts from cur, so in the first iteration, pre = arr[0], cur = arr[1]
+
+
+
+
+
+
+

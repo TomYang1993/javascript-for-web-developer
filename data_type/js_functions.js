@@ -1,4 +1,4 @@
-// pass by value or pass by reference
+// pass by value or pass by reference( pass by value always)
 
 // function names are pointers, only references, reference changes, so always overwriting, so no overloading
 // function can be passed in functions and can be returned, cuz functions are objects

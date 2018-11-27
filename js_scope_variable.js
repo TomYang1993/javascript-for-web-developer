@@ -22,3 +22,6 @@ console.log(person.name);  // will output tom, cuz pass by value of the referenc
 
 //sc:
 console.log(typeof null);
+
+
+//excution context, no block-level scope, identifier lookup(can't look down)

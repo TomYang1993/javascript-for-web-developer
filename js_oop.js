@@ -100,10 +100,11 @@ function Car(){
 //     console.log(this.make);
 // }
 
-// alternative way of writing, save the Car.prototype duplicates, but back to the pointers aanddn you can not overwrite prototype
-// so the constructor must be set back from Object to Car
-// when you assign the object literal from right to left, its constructor becomes Object because the object literal is created
+// alternative way of writing, sayinfo will not be duplicated again
+// when you assign the object literal from right to left to Car.prototype, its constructor becomes Object because the object literal is created
 // by Object function, and Car.prototype's pointer points to the new object not the original prototype Car function had
+// so the constructor must be set back from Object to Car
+
 
 Car.prototype = {
     constructor: Car,
@@ -160,12 +161,25 @@ Car.prototype.sayHi = function(){
 
 car2.sayHi();
 
+/* dynamic prototype pattern, encapsulation is better, it's a combination of CONSTRUCTOR PATTERN and PROTOTYPE PATTERN too */
+
+function Person(name) {
+    this.name = name;
+    if (typeof this.getName != "function") {
+        Person.prototype.getName = function () {
+            console.log(this.name);
+        }
+    }
+}
+
+var person1 = new Person();
+
 
 // PROTOTYPE PATTERN has its own problems
 // this pattern is ideal for functions, every object get an initial value when it comes to properties contain 
 // primitive values, because you can always shadow the original value
 // but reference values are shared between objects, that's not feasible
-// best practice is to combine CONSTRUCTOR PATTERN and PROTOTYPE PATTERN
+// best practice is to combination of CONSTRUCTOR PATTERN and PROTOTYPE PATTERN
 
 function People(name, age){
     this.groupName = name;

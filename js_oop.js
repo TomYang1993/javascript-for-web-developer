@@ -178,7 +178,7 @@ var person1 = new Person();
 // PROTOTYPE PATTERN has its own problems
 // this pattern is ideal for functions, every object get an initial value when it comes to properties contain 
 // primitive values, because you can always shadow the original value
-// but reference values are shared between objects, that's not feasible
+// but reference values are shared between objects, that's not feasible, change to child may affect parent
 // best practice is to combination of CONSTRUCTOR PATTERN and PROTOTYPE PATTERN
 
 function People(name, age){
@@ -212,6 +212,7 @@ person3.showList();
 person4.showList();
 
 // INHERITANCE
+/*  继承就做两件事，拿到原型上的性质与方法，还有就是父方程运行时的this参数  */
 // only prototype chaining has same problems as only prototype type object creation
 // the properties are all pointers so parent properties will be influenced by children properties
 // with constructor stealing
@@ -219,7 +220,7 @@ person4.showList();
 // same thing with only constructor stealing, function get copies too
 // combination inheritance 
 
-// **********************************  make two Super constructor calls//
+// **********************************  disadvantages: make two Super constructor calls every time//
 // function Super(name){
 //     this.name = name;
 // }

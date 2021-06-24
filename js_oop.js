@@ -254,7 +254,7 @@ inherit(Sub, Super);
 
 var person5 = new Sub("TOM", 26);
 
-// object.create creates a copy of Super.prototype, which only has the method, no properties
+// object.create creates a copy of Super.prototype(an object), which only has methods, no properties
 // all the properties like colors needs to run the constructor
 // this way of writing inheritance only makes one Super constructor call
 function inherit(Sub, Super){

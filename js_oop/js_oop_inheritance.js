@@ -60,6 +60,7 @@ console.log(description);
 description = Object.getOwnPropertyDescriptor(test, "name")
 console.log(description);
 
+/* ways to create instances */
 //FACTORY PATTERN
 function createPerson(name, age){
     var obj = new Object();
@@ -246,8 +247,6 @@ person4.showList();
 /* ******************************************** */
 
 // Above is more traditional oop
-// prototypal inheritance which is more javascript oriented(makes things messier in my opinion)
-
 // Object.create() established prototype connection between the object returned and the parameter object
 
 function Super(name){
@@ -273,9 +272,8 @@ var person5 = new Sub("TOM", 26);
 // all the properties like colors needs to run the constructor
 // this way of writing inheritance only makes one Super constructor call
 function inherit(Sub, Super){
-    var prototype = Object.create(Super.prototype);
-    prototype.constructor = Sub;
-    Sub.prototype = prototype;
+    Sub.prototype = Object.create(Super.prototype);
+    Sub.prototype.constructor = Sub;
 }
 
 console.log(Sub.prototype.colors)
